@@ -10,7 +10,7 @@ module ConfigManager
 
   def self.capabilities
     base_caps = @config.reject { |k,_| ['server_url'].include?(k) }
-    base_caps['deviceName'] = ENV['DEVICE_NAME'] if ENV['DEVICE_NAME']
+    base_caps['udid'] = ENV['UDID'] if ENV['UDID']
     base_caps['app']        = ENV['APP'] if ENV['APP']
     base_caps['appPackage'] = ENV['APP_PACKAGE'] if ENV['APP_PACKAGE']
     base_caps['appActivity'] = ENV['APP_ACTIVITY'] if ENV['APP_ACTIVITY']

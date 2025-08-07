@@ -1,4 +1,4 @@
-deviceName: "AndroidDevice"
+udid: "emulator-5554"
 appPackage: com.mercadolibre
 appActivity: com.mercadolibre.navigation.activities.BottomBarActivity
 noReset: true
