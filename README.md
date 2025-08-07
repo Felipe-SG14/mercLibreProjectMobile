@@ -27,7 +27,7 @@ sdkmanager --list
 adb devices
 ```
 
-### 🚀 How to Run Tests
+## 🚀 How to Run Tests
 
 First of all you need to clone the repository
 
@@ -46,7 +46,7 @@ Install dependencies using:
 bundle install
 ```
 
-## ⚙️ Desired Capabilities – `settings.yml`
+### ⚙️ Desired Capabilities – `settings.yml`
 By default, the framework takes the following parameters
 ```yaml
 udid: "AndroidDevice"                                                  # Device/emulator udid
@@ -69,7 +69,7 @@ The mandatory variables are:
 - UDID
 - APP_PACKAGE
 
-# In case you want to run an already installed application
+#### In case you want to run an already installed application
 
 **Ensure your Appium server is running and your device is connected via ADB.**
 
@@ -88,7 +88,7 @@ Linux
 SERVER_URL=http://localhost:4723 UDID=emulator-5554 APP_PACKAGE=com.mercadolibre APP_ACTIVITY=com.mercadolibre.navigation.activities.BottomBarActivity rspec ./spec/tests/mercado_libre_tests.rb
 ```
 
-# In case you want to run an application with the apk
+#### In case you want to run an application with the apk
 
 **Ensure your Appium server is running and your device is connected via ADB.**
 
@@ -107,7 +107,7 @@ Linux
 SERVER_URL=http://localhost:4723 UDID=emulator-5554 APP_PACKAGE=io.appium.android.apis APP=resources/app/ApiDemos-debug.apk rspec ./spec/tests/mercado_libre_tests.rb
 ```
 
-# If you want to run the automation with the default values defined in the settings.yml file
+#### If you want to run the automation with the default values defined in the settings.yml file
 Run a test with default configuration
 
 Windows (PS)
@@ -120,7 +120,7 @@ Linux
 rspec spec/tests/mercado_libre_tests.rb 
 ```
 
-### 📊 Report 
+## 📊 Report 
 
 By default, a report is generated at the following address: **.\logs\test_report.html**
 
