@@ -1,8 +1,8 @@
 # mercLibreProjectMobile
 
-# 📱 Mobile Automation Framework (RSpec + Appium)
+# 📱 Mobile Automation (RSpec + Appium)
 
-This project is a mobile test automation framework built with **Ruby**, **RSpec**, and **Appium**, with support for reporting using **Allure**.
+This project is a mobile test automation script built with **Ruby**, **RSpec**, and **Appium**
 
 ---
 
