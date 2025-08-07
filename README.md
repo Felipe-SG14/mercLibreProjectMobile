@@ -88,6 +88,11 @@ Linux
 SERVER_URL=http://localhost:4723 UDID=emulator-5554 APP_PACKAGE=com.mercadolibre APP_ACTIVITY=com.mercadolibre.navigation.activities.BottomBarActivity rspec ./spec/tests/mercado_libre_tests.rb
 ```
 
+Windows
+```bash
+set SERVER_URL=http://localhost:4723&& set UDID=emulator-5554&& set APP_PACKAGE=com.mercadolibre&& set APP_ACTIVITY=com.mercadolibre.navigation.activities.BottomBarActivity&& rspec .\spec\tests\mercado_libre_tests.rb
+```
+
 #### In case you want to run an application with the apk
 
 **Ensure your Appium server is running and your device is connected via ADB.**
@@ -105,6 +110,11 @@ The command to run the application would look as follows:
 Linux
 ```bash
 SERVER_URL=http://localhost:4723 UDID=emulator-5554 APP_PACKAGE=io.appium.android.apis APP=resources/app/ApiDemos-debug.apk rspec ./spec/tests/mercado_libre_tests.rb
+```
+
+Windows
+```bash
+set ERVER_URL=http://localhost:4723&& set UDID=emulator-5554&& set APP_PACKAGE=io.appium.android.apis&& set APP=resources/app/ApiDemos-debug.apk&& rspec ./spec/tests/mercado_libre_tests.rb
 ```
 
 #### If you want to run the automation with the default values defined in the settings.yml file
