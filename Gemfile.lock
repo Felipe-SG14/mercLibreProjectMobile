@@ -16,6 +16,7 @@ GEM
     faye-websocket (0.11.4)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1, < 0.8.0)
+    json (2.13.2)
     logger (1.7.0)
     method_source (1.1.0)
     nokogiri (1.18.9-x64-mingw-ucrt)
@@ -24,6 +25,8 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     racc (1.8.1)
+    report_builder (1.9)
+      json (>= 2.3.0)
     rexml (3.4.1)
     rspec (3.13.1)
       rspec-core (~> 3.13.0)
@@ -58,8 +61,10 @@ PLATFORMS
 
 DEPENDENCIES
   appium_lib
+  appium_lib_core
   dotenv
   pry
+  report_builder
   rspec
   yaml
 

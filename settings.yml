@@ -1,4 +1,3 @@
-device: android
 deviceName: "AndroidDevice"
 appPackage: com.mercadolibre
 appActivity: com.mercadolibre.navigation.activities.BottomBarActivity
