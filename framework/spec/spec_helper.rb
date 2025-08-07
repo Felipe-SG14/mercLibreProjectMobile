@@ -1,5 +1,4 @@
 require 'rspec'
-require 'allure-rspec'
 require_relative '../config/driver_manager'
 require_relative '../config/config_manager'
 require_relative '../helpers/log_manager.rb'

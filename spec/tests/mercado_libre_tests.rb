@@ -1,6 +1,5 @@
 require_relative '../../framework/spec/spec_helper'
 require_relative '../resources/mobile_app.rb'
-require 'allure-rspec'
 
 RSpec.describe 'MercadoLibre Test Cases' do
   it 'Mercado Libre Test' do
