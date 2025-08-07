@@ -1,0 +1,6 @@
+device: android
+deviceName: "AndroidDevice"
+appPackage: com.mercadolibre
+appActivity: com.mercadolibre.navigation.activities.BottomBarActivity
+noReset: true
+server_url: "http://localhost:4723"
