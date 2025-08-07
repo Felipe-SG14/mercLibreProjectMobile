@@ -47,7 +47,7 @@ bundle install
 ```
 
 ## ⚙️ Desired Capabilities – `settings.yml`
-By default, the framework takes the following parameters by default.
+By default, the framework takes the following parameters
 ```yaml
 udid: "AndroidDevice"                                                  # Device/emulator udid
 appPackage: com.mercadolibre                                           # App package to test
@@ -117,7 +117,7 @@ rspec .\spec\tests\mercado_libre_tests.rb
 
 Linux
 ```bash
-rspec .\spec\tests\mercado_libre_tests.rb
+rspec spec/tests/mercado_libre_tests.rb 
 ```
 
 ### 📊 Report 
