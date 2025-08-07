@@ -62,10 +62,9 @@ class MobileActions
     raise "Element not found #{target_locator} after #{max_scrolls} scrolls"
   end
 
-  def scroll_on_element(mobile_element, direction: 'down', percent: 0.8, distance: 500)
+  def scroll_on_element(mobile_element, direction: 'down', percent: 0.8, distance: 500, padding: 30)
     element = wait_element(mobile_element)
     rect = element.rect
-    padding = 5
     left = rect[:x] + padding
     top = rect[:y] + padding
     width = rect[:width] - 2 * padding
@@ -84,13 +83,13 @@ class MobileActions
     })
   end
 
-  def scroll_until_list_has_size_and_return_texts(container, mobile_element, expected_size, direction: 'down', max_scrolls: 15, distance: 50)
+  def scroll_until_list_has_size_and_return_texts(container, mobile_element, expected_size, direction: 'down', max_scrolls: 15, distance: 100)
     texts = []
     max_scrolls.times do |i|
       elements = @driver.find_elements(mobile_element.locator_type ,mobile_element.locator_value)
       texts = elements.map(&:text).reject(&:empty?)
       return texts if texts.size >= expected_size
-      scroll_on_element(container, direction: direction, distance: distance)
+      scroll_on_element(container, direction: direction, distance: distance, padding:400)
     end
     raise "Expected at least #{expected_size} elements with text, but only found #{texts.size} after #{max_scrolls} scrolls."
   end

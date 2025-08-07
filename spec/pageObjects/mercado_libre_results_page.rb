@@ -16,13 +16,14 @@ class MercadoLibreResultsPage < MercadoLibreCommonPage
                       .build
 
     @see_results_button = MobileElementBuilder.new
+                      .with_type(:clickable)
                       .with_type(:xpath)
                       .with_value("//android.widget.Button[contains(@text,'resultados')]")
                       .build
 
     @search_results_body = MobileElementBuilder.new
                       .with_type(:id)
-                      .with_value("com.mercadolibre:id/search_main_frame_layout")
+                      .with_value("com.mercadolibre:id/search_component_compose_view")
                       .build
 
     @first_five_product_names = MobileElementBuilder.new
@@ -103,8 +104,8 @@ class MercadoLibreResultsPage < MercadoLibreCommonPage
   end
 
   def get_five_firsts_products_pricces()
-    actualProductNames = @mobile_actions.scroll_until_list_has_size_and_return_texts(@search_results_body, @first_five_product_names, 4)
-    actualProductPricesString = clean_prices(@mobile_actions.scroll_until_list_has_size_and_return_texts(@search_results_body, @first_five_product_prices, 4))
+    actualProductNames = @mobile_actions.scroll_until_list_has_size_and_return_texts(@search_results_body, @first_five_product_names, 5)
+    actualProductPricesString = clean_prices(@mobile_actions.scroll_until_list_has_size_and_return_texts(@search_results_body, @first_five_product_prices, 5))
     actualProductPrices = actualProductPricesString.map(&:to_i)
     actualProductNames.zip(actualProductPrices).each do |name, price|
         puts "#{name} - #{price}"
